@@ -1,0 +1,115 @@
+.join-match-container {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  min-height: 100vh;
+  color: white;
+  padding: 2rem;
+  font-family: 'Arial', sans-serif;
+}
+
+.join-match-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.join-match-header h1 {
+  font-size: 2.5rem;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 1rem;
+}
+
+.car-illustration {
+  width: 200px;
+  height: 100px;
+  margin: 0 auto;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100"><path d="M20,50 L50,20 L150,20 L180,50 L160,80 L40,80 Z" fill="none" stroke="%234facfe" stroke-width="3"/><circle cx="60" cy="80" r="15" fill="%23333" stroke="%23fff"/><circle cx="140" cy="80" r="15" fill="%23333" stroke="%23fff"/></svg>') no-repeat center;
+}
+
+.selection-section {
+  margin-bottom: 2.5rem;
+}
+
+.selection-section h2 {
+  margin-bottom: 1rem;
+  color: #4facfe;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.option-card {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid #4facfe;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.option-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(79, 172, 254, 0.3);
+}
+
+.option-card.selected {
+  background: rgba(79, 172, 254, 0.2);
+  border-color: #00f2fe;
+}
+
+.option-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.option-name {
+  font-size: 1rem;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.back-button, .join-button {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-button {
+  background: #ff4d4d;
+  color: white;
+}
+
+.join-button {
+  background: linear-gradient(45deg, #4facfe, #00f2fe);
+  color: white;
+}
+
+.join-button.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.back-button:hover {
+  background: #ff3333;
+  transform: translateY(-3px);
+}
+
+.join-button:not(.disabled):hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 242, 254, 0.4);
+}
